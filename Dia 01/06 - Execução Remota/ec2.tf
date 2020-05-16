@@ -23,7 +23,7 @@ resource "aws_instance" "web" {
     connection {
       type = "ssh"
       user = "ubuntu"
-      host = "${self.public_ip}"]
+      host = "${self.public_ip}"
       private_key = "${file("/app/iaasweek.pem")}" # <-------- Altere para sua chave
     }
   }
