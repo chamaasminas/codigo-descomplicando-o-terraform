@@ -3,10 +3,10 @@ data "aws_ami" "ubuntu" {
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
+    values = ["IaaSWeek-${var.hash_commit}"]
   }
 
-  owners = ["099720109477"]
+  owners = ["777015859311"] # Gomex ID, não mude sem mudar o filtro
 }
 
 resource "aws_instance" "web" {
